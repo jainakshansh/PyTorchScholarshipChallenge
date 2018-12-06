@@ -2,10 +2,10 @@ import pandas as pd
 
 weight1 = 1.0
 weight2 = 1.0
-bias = -2
+bias = -0.5
 
 test_inputs = [(0, 0), (0, 1), (1, 0), (1, 1)]
-correct_outputs = [False, False, False, True]
+correct_outputs = [False, True, True, True]
 outputs = []
 
 for test_input, correct_output in zip(test_inputs, correct_outputs):
@@ -24,3 +24,6 @@ else:
     print('You got {} wrong. Keep trying!\n'.format(num_wrong))
 
 print(output_frame.to_string(index=False))
+
+# For the OR Perceptron algorithm, we just need to increase the weights or decrease the magnitude of the bias.
+# Changed the bias and the outputs to reflect values for OR Perceptron too.
